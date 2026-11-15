@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Menu - Kopi &amp; Roti Tiam Bangka</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="index.html" class="logo">Kopi Tiam <span>Bangka</span></a>
+        <button
+          type="button"
+          class="hamburger"
+          id="hamburger-btn"
+          aria-label="Buka menu navigasi"
+        >
+          &#9776;
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Navigasi Utama">
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="katalog.html" class="active">Katalog Menu</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section-block">
+      <h1>Daftar Menu &amp; Harga</h1>
+      <p>
+        Pilih sajian minuman hangat, dingin, maupun camilan pendamping favorit
+        Anda.
+      </p>
+
+      <section class="catalog-controls" aria-label="Filter dan Pencarian Menu">
+        <div class="control-group">
+          <label for="search-input">Cari Menu:</label>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Ketik nama menu..."
+          />
+        </div>
+        <div class="control-group">
+          <label for="category-filter">Kategori:</label>
+          <select id="category-filter">
+            <option value="semua">Semua Kategori</option>
+            <option value="Minuman">Minuman</option>
+            <option value="Makanan">Makanan</option>
+          </select>
+        </div>
+      </section>
+
+      <section
+        class="catalog-grid"
+        id="catalog-container"
+        aria-label="Daftar Produk"
+      >
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80"
+            alt="Secangkir Kopi O Panas"
+          />
+          <div class="card-body">
+            <span class="badge">Minuman</span>
+            <h3>Kopi O Klasik</h3>
+            <p>
+              Kopi hitam robusta saring khas Bangka tanpa ampas, disajikan
+              panas.
+            </p>
+            <p class="price">Rp 10.000</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80"
+            alt="Secangkir Kopi Susu Panas"
+          />
+          <div class="card-body">
+            <span class="badge">Minuman</span>
+            <h3>Kopi Susu Panas</h3>
+            <p>
+              Perpaduan kopi saring pekat dengan susu kental manis yang
+              seimbang.
+            </p>
+            <p class="price">Rp 13.000</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80"
+            alt="Segelas Es Kopi Susu Gula Aren"
+          />
+          <div class="card-body">
+            <span class="badge">Minuman</span>
+            <h3>Es Kopi Susu Gula Aren</h3>
+            <p>Kopi susu dingin dengan sirup gula aren murni dan susu segar.</p>
+            <p class="price">Rp 18.000</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1584776296944-ab6fb57b0bdd?w=600&q=80"
+            alt="Roti Bakar Srikaya Mentega"
+          />
+          <div class="card-body">
+            <span class="badge">Makanan</span>
+            <h3>Roti Bakar Srikaya Mentega</h3>
+            <p>
+              Roti panggang renyah dengan olesan selai srikaya pandan dan
+              mentega.
+            </p>
+            <p class="price">Rp 15.000</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1525351484163-7529414342d8?w=600&q=80"
+            alt="Dua butir telur ayam kampung setengah matang"
+          />
+          <div class="card-body">
+            <span class="badge">Makanan</span>
+            <h3>Telur Setengah Matang</h3>
+            <p>
+              Dua butir telur ayam kampung matang sempurna disajikan dengan
+              kecap asin dan lada.
+            </p>
+            <p class="price">Rp 14.000</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&q=80"
+            alt="Sepiring Pisang Goreng Pasir Keju"
+          />
+          <div class="card-body">
+            <span class="badge">Makanan</span>
+            <h3>Pisang Goreng Pasir</h3>
+            <p>
+              Pisang kepok manis balut tepung roti renyah dengan taburan gula
+              palem.
+            </p>
+            <p class="price">Rp 16.000</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          &copy; 2026 Kopi &amp; Roti Tiam Bangka. Jl. Jenderal Sudirman No. 45,
+          Pangkalpinang.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,433 @@
+:root {
+  --warna-utama: #5c3a21;
+  --warna-sekunder: #c88a4b;
+  --warna-latar: #faf6f0;
+  --warna-kartu: #ffffff;
+  --warna-teks: #2b2118;
+  --warna-border: #e0d5c7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--warna-latar);
+  color: var(--warna-teks);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Header & Navigasi (Flexbox) */
+.site-header {
+  background-color: var(--warna-utama);
+  color: #ffffff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--warna-sekunder);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 1.4rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: var(--warna-sekunder);
+  color: var(--warna-utama);
+}
+
+/* Animasi Keyframes */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(43, 33, 24, 0.75), rgba(43, 33, 24, 0.75)),
+              url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80') center/cover no-repeat;
+  color: #ffffff;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero-content {
+  animation: fadeSlideUp 0.8s ease-out;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 1.8rem;
+  font-size: 1.1rem;
+}
+
+/* Tombol */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--warna-sekunder);
+  color: var(--warna-teks);
+}
+
+.btn-primary:hover {
+  background-color: #d99b5b;
+  transform: translateY(-2px);
+}
+
+/* Section Umum */
+.section-block {
+  padding: 2.5rem 0;
+}
+
+.section-block h1,
+.section-block h2 {
+  color: var(--warna-utama);
+  margin-bottom: 1rem;
+}
+
+/* Grid Kartu */
+.grid-3,
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: var(--warna-kartu);
+  border: 1px solid var(--warna-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.2rem;
+}
+
+.card-body h3 {
+  margin-bottom: 0.5rem;
+  color: var(--warna-utama);
+}
+
+.price {
+  font-weight: 700;
+  color: var(--warna-utama);
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--warna-latar);
+  color: var(--warna-utama);
+  border: 1px solid var(--warna-sekunder);
+  font-size: 0.8rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
+/* Tabel */
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--warna-kartu);
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--warna-border);
+  text-align: left;
+}
+
+thead {
+  background-color: var(--warna-utama);
+  color: #ffffff;
+}
+
+/* Halaman Tentang */
+.about-banner {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem 0 1.5rem;
+}
+
+.vision-mission {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.info-box {
+  background-color: var(--warna-kartu);
+  padding: 1.5rem;
+  border-left: 4px solid var(--warna-sekunder);
+  border-radius: 6px;
+}
+
+.info-box ul {
+  margin-left: 1.2rem;
+}
+
+.role {
+  font-weight: 600;
+  color: var(--warna-sekunder);
+  margin-bottom: 0.4rem;
+}
+
+/* Filter Katalog */
+.catalog-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--warna-kartu);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--warna-border);
+  margin-top: 1rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.control-group label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.control-group input,
+.control-group select {
+  padding: 0.6rem;
+  border: 1px solid var(--warna-border);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Halaman Kontak & Form */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.7rem;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 280px;
+  border: 0;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.contact-form-section {
+  background-color: var(--warna-kartu);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--warna-border);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid var(--warna-border);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.error-msg {
+  color: #b91c1c;
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.success-msg {
+  color: #15803d;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--warna-utama);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.2rem 0;
+  margin-top: 2rem;
+}
+
+/* Media Query 1: Tampilan HP (<= 600px) */
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    width: 100%;
+    margin-top: 0.8rem;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 0.5rem;
+  }
+
+  /* Class untuk toggle menu via JavaScript */
+  .main-nav.nav-closed {
+    display: none;
+  }
+
+  .grid-3,
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Media Query 2: Tampilan Desktop (>= 992px) */
+@media (min-width: 992px) {
+  .grid-3,
+  .catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .vision-mission {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}

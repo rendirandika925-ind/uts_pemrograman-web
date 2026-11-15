@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - Kopi &amp; Roti Tiam Bangka</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="index.html" class="logo">Kopi Tiam <span>Bangka</span></a>
+        <button
+          type="button"
+          class="hamburger"
+          id="hamburger-btn"
+          aria-label="Buka menu navigasi"
+        >
+          &#9776;
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Navigasi Utama">
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="katalog.html">Katalog Menu</a></li>
+            <li><a href="kontak.html" class="active">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section-block">
+      <h1>Hubungi &amp; Kunjungi Kami</h1>
+      <div class="contact-layout">
+        <section class="contact-info">
+          <h2>Informasi Lokasi</h2>
+          <p>
+            <strong>Alamat:</strong> Jl. Jenderal Sudirman No. 45, Taman Sari,
+            Kota Pangkalpinang, Kepulauan Bangka Belitung 33121
+          </p>
+          <p><strong>WhatsApp / Telepon:</strong> 081278901234</p>
+          <p><strong>Instagram:</strong> @kopitiambangka.id</p>
+
+          <div class="map-container">
+            <iframe
+              title="Peta Lokasi Kopi Tiam Bangka di Pangkalpinang"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.078459217288!2d106.1121693!3d-2.1235237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e22c14444444445%3A0x1111111111111111!2sPangkalpinang%2C%20Kota%20Pangkal%20Pinang%2C%20Kepulauan%20Bangka%20Belitung!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </section>
+
+        <section class="contact-form-section">
+          <h2>Kirim Pesan atau Reservasi Meja</h2>
+          <form id="contact-form" action="#" method="post">
+            <div class="form-group">
+              <label for="nama">Nama Lengkap</label>
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                required
+                minlength="3"
+                maxlength="60"
+                placeholder="Masukkan nama Anda"
+              />
+              <small class="error-msg" id="error-nama"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Alamat Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="contoh@email.com"
+              />
+              <small class="error-msg" id="error-email"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="telepon"
+                >Nomor HP / WhatsApp (10-13 digit angka)</label
+              >
+              <input
+                type="tel"
+                id="telepon"
+                name="telepon"
+                required
+                pattern="[0-9]{10,13}"
+                placeholder="081234567890"
+              />
+              <small class="error-msg" id="error-telepon"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="keperluan">Keperluan</label>
+              <select id="keperluan" name="keperluan" required>
+                <option value="">-- Pilih Keperluan --</option>
+                <option value="reservasi">Reservasi Meja</option>
+                <option value="pesanan">
+                  Pesanan Jumlah Banyak (Catering)
+                </option>
+                <option value="saran">Kritik &amp; Saran</option>
+              </select>
+              <small class="error-msg" id="error-keperluan"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="pesan">Pesan (Minimal 10 karakter)</label>
+              <textarea
+                id="pesan"
+                name="pesan"
+                rows="4"
+                required
+                minlength="10"
+                maxlength="500"
+                placeholder="Tuliskan detail pesan atau jadwal reservasi..."
+              ></textarea>
+              <small class="error-msg" id="error-pesan"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            <p class="success-msg" id="form-success" role="status"></p>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          &copy; 2026 Kopi &amp; Roti Tiam Bangka. Jl. Jenderal Sudirman No. 45,
+          Pangkalpinang.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
